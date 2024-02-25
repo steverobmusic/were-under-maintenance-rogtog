@@ -11,6 +11,7 @@
             padding: 0;
             box-sizing: border-box;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -19,8 +20,9 @@
 
         .container {
             display: flex;
-            width: 90%; /* Adjusted width */
-            max-width: 1200px; /* Maximum width */
+            flex-direction: column;
+            width: 90%;
+            max-width: 1200px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -42,25 +44,40 @@
             align-items: center;
             padding: 20px;
             text-align: center;
-            font-size: 18px; /* Adjusted font size */
+            font-size: 18px;
             line-height: 1.5;
         }
 
         .title {
-            font-size: 36px; /* Adjusted font size */
+            font-size: 36px;
             font-weight: bold;
             color: #333;
             margin-bottom: 20px;
         }
+
+        .copyright {
+            margin-top: auto;
+            padding: 10px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
     </style>
+    <script>
+        // Auto-refresh every 6 seconds
+        setTimeout(function(){
+            location.reload();
+        }, 6000);
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="image-placeholder"></div>
         <div class="text-placeholder">
             <div class="title">Scheduled Maintenance</div>
-            <p>We're busy making our site even better for you. We’ll be unavailable on Saturday, February 24 at 10:00 p.m. to Sunday, February 25, 2024, at 01:00 p.m. ET. Revisit us once we’re back up and running.</p>
+            <p>We’ll be unavailable on Saturday, February 24 at 10:00 p.m. to Sunday, February 25, 2024, at 03:00 p.m. ET. Revisit us once we’re back up and running.</p>
         </div>
     </div>
+    <div class="copyright">&#169; 2024 Steve Rob Communications, All Rights Reserved</div>
 </body>
 </html>
