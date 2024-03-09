@@ -21,10 +21,12 @@
     }
     .content {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
     }
     .image-placeholder {
-      width: 431px;
+      width: 100%;
+      max-width: 431px;
       height: 431px;
       background-image: url('https://steverobenterprises.sirv.com/MaintenanceSRM.png');
       background-size: cover;
@@ -50,6 +52,19 @@
       margin-top: 20px;
       text-align: center;
       color: #888;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .content {
+        flex-direction: column;
+      }
+      .image-placeholder {
+        border-radius: 10px 10px 0 0;
+      }
     }
   </style>
   <title>Scheduled Maintenance</title>
